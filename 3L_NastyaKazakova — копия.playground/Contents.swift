@@ -11,6 +11,7 @@ import UIKit
 
 //6. Вывести значения свойств экземпляров в консоль.
 
+
 enum IsMotorOn: String{
     case motorIsOn = "Двигатель включен"
     case motorIsOff = "Двигатель выключен "
@@ -41,7 +42,7 @@ struct SportCar {
         }
     }
     func description() {
-        print("Машина \(brand) год выпуска: \(year). Состояние двигателя: \(windowsOpen.rawValue). Обьем багажника \(trunkCapacity)")
+        print("Машина \(brand) год выпуска: \(year). Состояние двигателя: \(windowsOpen.rawValue). Обьем багажника \(trunkCapacity).")
     }
     
 }
