@@ -86,6 +86,7 @@ extension spotCar: CustomStringConvertible {
         return "\nSport car\nBrand: \(brand).\nRelised year: \(year)\nMax speed: \(maxSpeed)\n\(motor)\n\(windows)\n"
     }
 }
+
 extension trunkCar: CustomStringConvertible {
     var description: String{
         return "\nTrunck car\nBrand: \(brand)\nRelised year: \(year)\nTrunk capacity:\(trunkCapacity)\nMotor status is \(motor)\nWindows is \(windows)\n"
