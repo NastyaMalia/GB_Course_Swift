@@ -17,23 +17,28 @@ struct queue <Element: Comparable> {
     mutating func push (_ item: Element){
         items.append(item)
     }
+    
     mutating func pop () -> Element? {
         if items.count > 0{
             return items.removeLast()}
         else { return nil}
     }
+    
     mutating func deleteFirst () -> Element? {
         if items.count > 0{
             return items.removeFirst()}
         else {return nil }
     }
+    
     mutating func elementsInArray() -> Int {
         return items.count
     }
+    
     mutating func filterr() -> [Element] {
         return items.shuffled()
     }
 }
+
 
 var animals = queue<String>()
 animals.push("cat")
