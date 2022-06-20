@@ -8,8 +8,17 @@
 import SpriteKit
 import GameplayKit
 
+struct CollisionCatigory{
+    
+    static let Snake: UInt32 = 0x1 << 0
+    static let SnakeHead: UInt32 = 0x1 << 1
+    static let Apple: UInt32 = 0x1 << 2
+    static let EdgeBody: UInt32 = 0x1 << 3
+}
+
 class GameScene: SKScene {
     
+    var snake: Snake?
    
     override func didMove(to view: SKView) {
         
@@ -42,6 +51,13 @@ class GameScene: SKScene {
         
         createApple()
         
+        snake = Snake(atPoint: CGPoint(x: view.scene!.frame.midX, y: view.scene!.frame.midY))
+        self.addChild(snake!)
+        
+        self.physicsWorld.contactDelegate = self
+        self.physicsBody?.categoryBitMask = CollisionCatigory.EdgeBody
+        self.physicsBody?.collisionBitMask = (CollisionCatigory.Snake) | CollisionCatigory.SnakeHead
+
         
         }
         
@@ -58,6 +74,13 @@ class GameScene: SKScene {
                       return
                   }
             touchNode.fillColor = .green
+            
+            if touchNode.name == "counterClockButton"{
+                snake!.moveClockwise()
+            } else if touchNode.name == "counterClockwiseButton"{
+                    snake!.moveCounterClockwise()
+            }
+            
         }
         
         }
@@ -85,7 +108,8 @@ class GameScene: SKScene {
     
     
     override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
+        snake!.move()
+        
     }
 }
 
@@ -97,6 +121,31 @@ extension GameScene {
         let randY = CGFloat(arc4random_uniform(UInt32(view!.scene!.frame.maxY-5)))
         let apple = Apple(position: CGPoint(x: randX, y: randY))
         self.addChild(apple)
+        
+    }
+    
+}
+
+
+extension GameScene: SKPhysicsContactDelegate{
+    func didBegin(_ contact: SKPhysicsContact){
+    
+        let bodyes = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
+        let collisionObject = bodyes - CollisionCatigory.SnakeHead
+        
+        switch collisionObject {
+        case CollisionCatigory.Apple:
+            let apple = contact.bodyA.node is Apple ? contact.bodyA.node : contact.bodyB.node
+            snake?.addBodyPart()
+            apple?.removeFromParent()
+            createApple()
+            
+        case CollisionCatigory.EdgeBody:
+           break
+            
+        default: break
+        }
+        
         
     }
     

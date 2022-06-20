@@ -20,6 +20,9 @@ class Apple: SKShapeNode {
         lineWidth = 5
         
         self.position = position
+        self.physicsBody = SKPhysicsBody(circleOfRadius: 10, center: CGPoint(x: 5, y: 5))
+        self.physicsBody?.categoryBitMask = CollisionCatigory.Apple
+
         
     }
     

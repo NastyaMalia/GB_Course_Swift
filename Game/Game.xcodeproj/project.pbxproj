@@ -18,6 +18,8 @@
 		4D687E0B2857A7860098242E /* GameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D687E0A2857A7860098242E /* GameUITestsLaunchTests.swift */; };
 		4D687E182857B5550098242E /* Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D687E172857B5550098242E /* Apple.swift */; };
 		4D687E1A2857B9B70098242E /* SnakeBodyPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D687E192857B9B70098242E /* SnakeBodyPart.swift */; };
+		4D6A47DA2860BA9F00CCB7F2 /* SnakeHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6A47D92860BA9F00CCB7F2 /* SnakeHead.swift */; };
+		4D6A47DC2860BB8B00CCB7F2 /* Snake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6A47DB2860BB8B00CCB7F2 /* Snake.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		4D687E0A2857A7860098242E /* GameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4D687E172857B5550098242E /* Apple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apple.swift; sourceTree = "<group>"; };
 		4D687E192857B9B70098242E /* SnakeBodyPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeBodyPart.swift; sourceTree = "<group>"; };
+		4D6A47D92860BA9F00CCB7F2 /* SnakeHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeHead.swift; sourceTree = "<group>"; };
+		4D6A47DB2860BB8B00CCB7F2 /* Snake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snake.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +108,7 @@
 			children = (
 				4D687DE42857A77F0098242E /* AppDelegate.swift */,
 				4D687DEA2857A7800098242E /* GameScene.swift */,
-				4D687E192857B9B70098242E /* SnakeBodyPart.swift */,
+				4D6A47DD2860BBCB00CCB7F2 /* SnakeModel */,
 				4D687DEC2857A7800098242E /* GameViewController.swift */,
 				4D687E172857B5550098242E /* Apple.swift */,
 				4D687DEE2857A7800098242E /* Main.storyboard */,
@@ -129,6 +133,16 @@
 				4D687E0A2857A7860098242E /* GameUITestsLaunchTests.swift */,
 			);
 			path = GameUITests;
+			sourceTree = "<group>";
+		};
+		4D6A47DD2860BBCB00CCB7F2 /* SnakeModel */ = {
+			isa = PBXGroup;
+			children = (
+				4D687E192857B9B70098242E /* SnakeBodyPart.swift */,
+				4D6A47D92860BA9F00CCB7F2 /* SnakeHead.swift */,
+				4D6A47DB2860BB8B00CCB7F2 /* Snake.swift */,
+			);
+			path = SnakeModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,10 +276,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D6A47DA2860BA9F00CCB7F2 /* SnakeHead.swift in Sources */,
 				4D687E182857B5550098242E /* Apple.swift in Sources */,
 				4D687DEB2857A7800098242E /* GameScene.swift in Sources */,
 				4D687DED2857A7800098242E /* GameViewController.swift in Sources */,
 				4D687E1A2857B9B70098242E /* SnakeBodyPart.swift in Sources */,
+				4D6A47DC2860BB8B00CCB7F2 /* Snake.swift in Sources */,
 				4D687DE52857A77F0098242E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
