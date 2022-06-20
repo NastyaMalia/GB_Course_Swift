@@ -19,7 +19,7 @@ struct CollisionCatigory{
 class GameScene: SKScene {
     
     var snake: Snake?
-   
+    
     override func didMove(to view: SKView) {
         
         backgroundColor = SKColor.black
@@ -141,7 +141,10 @@ extension GameScene: SKPhysicsContactDelegate{
             createApple()
             
         case CollisionCatigory.EdgeBody:
-           break
+            snake?.removeFromParent()
+            snake = Snake(atPoint: CGPoint(x: view!.scene!.frame.midX, y: view!.scene!.frame.midY))
+            self.addChild(snake!)
+            
             
         default: break
         }
