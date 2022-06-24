@@ -7,19 +7,19 @@
 
 import UIKit
 
-class secondViewController: UIViewController {
+class SecondViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    
+       
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
         navigationController?.setNavigationBarHidden(false, animated: false)
 //print("test")
+      
     }
-    
+
 
 }

@@ -239,7 +239,7 @@
         <!--Second View Controller-->
         <scene sceneID="4bv-Vy-rkk">
             <objects>
-                <tabBarController id="QiO-Fk-Lil" customClass="secondViewController" customModule="Vkontakte" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="QiO-Fk-Lil" customClass="SecondViewController" customModule="Vkontakte" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Ubq-tV-pZL"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="shS-ki-9Lx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
