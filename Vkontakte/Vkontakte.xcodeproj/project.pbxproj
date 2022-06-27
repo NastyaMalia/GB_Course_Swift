@@ -60,9 +60,8 @@
 		4D46878C286A112C0013F837 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4DBF5AFE2869CF830015970E /* FriendsTableViewController.swift */,
-				4DAF0E5728652CB4005E8C30 /* UILoginController + extention.swift */,
 				4D687E2B285A148C0098242E /* LogInConroller.swift */,
+				4DBF5AFE2869CF830015970E /* FriendsTableViewController.swift */,
 				4D6A455728650A48003E4EF6 /* SecondViewController.swift */,
 				4D468788286A0BBC0013F837 /* FriendsProfileCollectionViewController.swift */,
 				4DBF5B002869D0640015970E /* CommunitiesTableViewController.swift */,
@@ -89,6 +88,24 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		4D46878F286A15490013F837 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				4DAF0E5728652CB4005E8C30 /* UILoginController + extention.swift */,
+			);
+			path = Extention;
+			sourceTree = "<group>";
+		};
+		4D468790286A15930013F837 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				4D687E2D285A148C0098242E /* Main.storyboard */,
+				4D687E30285A14920098242E /* Assets.xcassets */,
+				4D687E32285A14920098242E /* LaunchScreen.storyboard */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
 		4D687E1B285A148C0098242E = {
 			isa = PBXGroup;
 			children = (
@@ -113,9 +130,8 @@
 				4D46878E286A12380013F837 /* Model */,
 				4D46878C286A112C0013F837 /* Controller */,
 				4D46878D286A11D40013F837 /* View */,
-				4D687E2D285A148C0098242E /* Main.storyboard */,
-				4D687E30285A14920098242E /* Assets.xcassets */,
-				4D687E32285A14920098242E /* LaunchScreen.storyboard */,
+				4D46878F286A15490013F837 /* Extention */,
+				4D468790286A15930013F837 /* Resourses */,
 				4D687E35285A14920098242E /* Info.plist */,
 			);
 			path = Vkontakte;
