@@ -61,8 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				4D687E2B285A148C0098242E /* LogInConroller.swift */,
-				4DBF5AFE2869CF830015970E /* FriendsTableViewController.swift */,
 				4D6A455728650A48003E4EF6 /* SecondViewController.swift */,
+				4DBF5AFE2869CF830015970E /* FriendsTableViewController.swift */,
 				4D468788286A0BBC0013F837 /* FriendsProfileCollectionViewController.swift */,
 				4DBF5B002869D0640015970E /* CommunitiesTableViewController.swift */,
 			);
