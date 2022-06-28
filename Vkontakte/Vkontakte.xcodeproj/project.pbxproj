@@ -16,6 +16,8 @@
 		4D687E31285A14920098242E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D687E30285A14920098242E /* Assets.xcassets */; };
 		4D687E34285A14920098242E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D687E32285A14920098242E /* LaunchScreen.storyboard */; };
 		4D6A455828650A48003E4EF6 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6A455728650A48003E4EF6 /* SecondViewController.swift */; };
+		4D8170F8286B35D5002955D9 /* AllCommunityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8170F7286B35D5002955D9 /* AllCommunityTableViewController.swift */; };
+		4D8170FA286B3C1E002955D9 /* AllCommunityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8170F9286B3C1E002955D9 /* AllCommunityTableViewCell.swift */; };
 		4DAF0E5828652CB4005E8C30 /* UILoginController + extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAF0E5728652CB4005E8C30 /* UILoginController + extention.swift */; };
 		4DBF5AFF2869CF830015970E /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBF5AFE2869CF830015970E /* FriendsTableViewController.swift */; };
 		4DBF5B012869D0640015970E /* CommunitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBF5B002869D0640015970E /* CommunitiesTableViewController.swift */; };
@@ -37,6 +39,8 @@
 		4D687E33285A14920098242E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D687E35285A14920098242E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D6A455728650A48003E4EF6 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		4D8170F7286B35D5002955D9 /* AllCommunityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCommunityTableViewController.swift; sourceTree = "<group>"; };
+		4D8170F9286B3C1E002955D9 /* AllCommunityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCommunityTableViewCell.swift; sourceTree = "<group>"; };
 		4DAF0E5728652CB4005E8C30 /* UILoginController + extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILoginController + extention.swift"; sourceTree = "<group>"; };
 		4DBF5AFE2869CF830015970E /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
 		4DBF5B002869D0640015970E /* CommunitiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesTableViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +69,7 @@
 				4DBF5AFE2869CF830015970E /* FriendsTableViewController.swift */,
 				4D468788286A0BBC0013F837 /* FriendsProfileCollectionViewController.swift */,
 				4DBF5B002869D0640015970E /* CommunitiesTableViewController.swift */,
+				4D8170F7286B35D5002955D9 /* AllCommunityTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -109,6 +114,7 @@
 		4D687E1B285A148C0098242E = {
 			isa = PBXGroup;
 			children = (
+				4D8170F9286B3C1E002955D9 /* AllCommunityTableViewCell.swift */,
 				4D687E26285A148C0098242E /* Vkontakte */,
 				4D687E25285A148C0098242E /* Products */,
 			);
@@ -209,12 +215,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D6A455828650A48003E4EF6 /* SecondViewController.swift in Sources */,
+				4D8170F8286B35D5002955D9 /* AllCommunityTableViewController.swift in Sources */,
 				4DAF0E5828652CB4005E8C30 /* UILoginController + extention.swift in Sources */,
 				4D468789286A0BBC0013F837 /* FriendsProfileCollectionViewController.swift in Sources */,
 				4DBF5AFF2869CF830015970E /* FriendsTableViewController.swift in Sources */,
 				4DBF5B0B2869EB5C0015970E /* Friends.swift in Sources */,
 				4DBF5B082869E9D30015970E /* FriendsCell.swift in Sources */,
 				4DBF5B052869DBD40015970E /* Community.swift in Sources */,
+				4D8170FA286B3C1E002955D9 /* AllCommunityTableViewCell.swift in Sources */,
 				4D46878B286A0DEE0013F837 /* FriendProfileCollectionViewCell.swift in Sources */,
 				4DBF5B032869D6110015970E /* CommunityCell.swift in Sources */,
 				4DBF5B012869D0640015970E /* CommunitiesTableViewController.swift in Sources */,

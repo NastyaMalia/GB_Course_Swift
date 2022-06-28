@@ -1,23 +1,21 @@
 //
-//  FriendsTableViewCell.swift
+//  AllCityTableViewCell.swift
 //  Vkontakte
 //
-//  Created by Nastya Kazakova on 27.06.22.
+//  Created by Nastya Kazakova on 28.06.22.
 //
 
 import UIKit
 
-class FriendsCell: UITableViewCell {
+class AllCommunityTableViewCell: UITableViewCell {
+
     
-    @IBOutlet weak var ImageFriends: UIImageView!
-    @IBOutlet weak var LabelFriends: UILabel!
+    @IBOutlet weak var AllCommynityImage: UIImageView!
     
+    @IBOutlet weak var AllCommunityName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        ImageFriends.layer.cornerRadius = ImageFriends.bounds.width / 2
-        
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,6 +23,5 @@ class FriendsCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-}
- 
 
+}

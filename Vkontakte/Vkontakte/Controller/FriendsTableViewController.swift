@@ -12,18 +12,18 @@ class FriendsTableViewController: UITableViewController {
     let friends = [
         Friends(name:"Stasy", image: UIImage(named: "monkey7")),
         Friends(name:"Sasha", image: UIImage(named: "monkey3")),
-        Friends(name:"Jonh", image: UIImage(named: "monkey2")),
+        Friends(name:"Jonh", image: UIImage(named: "chiken")),
         Friends(name:"Robert", image: UIImage(named: "monkey")),
         Friends(name:"Sergey", image: UIImage(named: "monkey5")),
         Friends(name:"Ivan", image: UIImage(named: "monkey4")),
-        Friends(name:"Skyler", image: UIImage(named: "monkey9")),
+        Friends(name:"Skyler", image: UIImage(named: "chiken2")),
         Friends(name:"Volha", image: UIImage(named: "monkey8")),
         Friends(name:"Timur", image: UIImage(named: "monkey6")),
         Friends(name:"Vitalii", image: UIImage(named: "monkey2")),
         Friends(name:"Malia", image: UIImage(named: "monkey7")),
         Friends(name:"Hizuki", image: UIImage(named: "monkey8")),
         Friends(name:"Eugenii", image: UIImage(named: "monkey9")),
-        Friends(name:"Masha", image: UIImage(named: "monkey")),
+        Friends(name:"Masha", image: UIImage(named: "chiken3")),
 
     
     ]
@@ -63,7 +63,14 @@ class FriendsTableViewController: UITableViewController {
         return cell
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "showProfile",
+           let destinationVC = segue.destination as? FriendsProfileCollectionViewController,
+           let indexPath = tableView.indexPathForSelectedRow {
+            let friendName = friends[indexPath.row].name
+            destinationVC.title = friendName
+        }
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

@@ -1,25 +1,30 @@
 //
-//  CommunitiesTableViewController.swift
+//  AllCommunityTableViewController.swift
 //  Vkontakte
 //
-//  Created by Nastya Kazakova on 27.06.22.
+//  Created by Nastya Kazakova on 28.06.22.
 //
 
 import UIKit
 
-class CommunitiesTableViewController: UITableViewController {
+class AllCommunityTableViewController: UITableViewController {
 
-    
-    var communities = [
-        Community(name:"Netflix", image: UIImage(named: "netflix")),
-        Community(name:"NASA", image: UIImage(named: "NASA")),
-        Community(name:"Mobile Legends", image: UIImage(named: "mobileLegends")),
-//        Community(name:"Serials", image: UIImage(named: "serial")),
-//        Community(name:"TMBLR" , image: UIImage(named: "tmblr")),
-//        Community(name:"Sarkasm", image: UIImage(named: "sarcasm")),
-//        Community(name:"Top movies", image: UIImage(named: "movie")),
-//        Community(name:"Marvel", image: UIImage(named: "marvel")),
+    let allCommunities = [
+//        Community(name:"Netflix", image: UIImage(named: "netflix")),
+//        Community(name:"NASA", image: UIImage(named: "NASA")),
+//        Community(name:"Mobile Legends", image: UIImage(named: "mobileLegends")),
+        Community(name:"Serials", image: UIImage(named: "serial")),
+        Community(name:"TMBLR" , image: UIImage(named: "tmblr")),
+        Community(name:"Sarkasm", image: UIImage(named: "sarcasm")),
+        Community(name:"Top movies", image: UIImage(named: "movie")),
+        Community(name:"Marvel", image: UIImage(named: "marvel")),
     ]
+    
+    override var tableView: UITableView!{
+        didSet{
+    tableView.dataSource = self
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,35 +45,19 @@ class CommunitiesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return communities.count
+        return allCommunities.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard  let cell = tableView.dequeueReusableCell(withIdentifier: "CommunityCell", for: indexPath) as? CommunityCell else{
-            preconditionFailure("Error")
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AllCommunities", for: indexPath) as! AllCommunityTableViewCell 
+      
+        cell.AllCommynityImage.image = allCommunities[indexPath.row].image
+        cell.AllCommunityName.text = allCommunities[indexPath.row].name
 
-        cell.CommunityLabel.text = communities[indexPath.row].name
-        cell.ImageCommunity.image = communities[indexPath.row].image
-        
         return cell
     }
     
-    @IBAction func addSelectCommunity (segue: UIStoryboardSegue){
-        if  let sourceVC = segue.source as? AllCommunityTableViewController,
-            let indexPath = sourceVC.tableView.indexPathForSelectedRow {
-            
-            let community = sourceVC.allCommunities[indexPath.row]
-            
-            
-            if !communities.contains(where: {$0.name == community.name}) {
-                communities.append(community)
-                tableView.reloadData()
-            }
-         
-        }
-    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -78,21 +67,17 @@ class CommunitiesTableViewController: UITableViewController {
     }
     */
 
-    
-   /// Override to support editing the table view.
+    /*
+    // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            
-            communities.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            
         } else if editingStyle == .insert {
-            
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }
+        }    
     }
-    
+    */
 
     /*
     // Override to support rearranging the table view.
