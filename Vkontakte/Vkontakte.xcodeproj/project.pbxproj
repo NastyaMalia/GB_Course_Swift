@@ -19,6 +19,7 @@
 		4D8170F8286B35D5002955D9 /* AllCommunityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8170F7286B35D5002955D9 /* AllCommunityTableViewController.swift */; };
 		4D8170FA286B3C1E002955D9 /* AllCommunityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8170F9286B3C1E002955D9 /* AllCommunityTableViewCell.swift */; };
 		4D8170FE286DC99A002955D9 /* AvatarUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8170FD286DC99A002955D9 /* AvatarUIView.swift */; };
+		4D817100286DD140002955D9 /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8170FF286DD140002955D9 /* LikeControl.swift */; };
 		4DAF0E5828652CB4005E8C30 /* UILoginController + extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAF0E5728652CB4005E8C30 /* UILoginController + extention.swift */; };
 		4DBF5AFF2869CF830015970E /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBF5AFE2869CF830015970E /* FriendsTableViewController.swift */; };
 		4DBF5B012869D0640015970E /* CommunitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBF5B002869D0640015970E /* CommunitiesTableViewController.swift */; };
@@ -43,6 +44,7 @@
 		4D8170F7286B35D5002955D9 /* AllCommunityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCommunityTableViewController.swift; sourceTree = "<group>"; };
 		4D8170F9286B3C1E002955D9 /* AllCommunityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCommunityTableViewCell.swift; sourceTree = "<group>"; };
 		4D8170FD286DC99A002955D9 /* AvatarUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarUIView.swift; sourceTree = "<group>"; };
+		4D8170FF286DD140002955D9 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
 		4DAF0E5728652CB4005E8C30 /* UILoginController + extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILoginController + extention.swift"; sourceTree = "<group>"; };
 		4DBF5AFE2869CF830015970E /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
 		4DBF5B002869D0640015970E /* CommunitiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesTableViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		4D8170FB286DAED0002955D9 /* Friend */ = {
 			isa = PBXGroup;
 			children = (
+				4D8170FF286DD140002955D9 /* LikeControl.swift */,
 				4D8170FD286DC99A002955D9 /* AvatarUIView.swift */,
 				4DBF5B072869E9D30015970E /* FriendsCell.swift */,
 				4D46878A286A0DED0013F837 /* FriendProfileCollectionViewCell.swift */,
@@ -243,6 +246,7 @@
 				4DBF5B082869E9D30015970E /* FriendsCell.swift in Sources */,
 				4DBF5B052869DBD40015970E /* Community.swift in Sources */,
 				4D8170FA286B3C1E002955D9 /* AllCommunityTableViewCell.swift in Sources */,
+				4D817100286DD140002955D9 /* LikeControl.swift in Sources */,
 				4D46878B286A0DEE0013F837 /* FriendProfileCollectionViewCell.swift in Sources */,
 				4DBF5B032869D6110015970E /* CommunityCell.swift in Sources */,
 				4DBF5B012869D0640015970E /* CommunitiesTableViewController.swift in Sources */,

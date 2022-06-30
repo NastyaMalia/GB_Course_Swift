@@ -22,7 +22,6 @@ class AvatarUIView: UIView {
         shadowView.layer.shadowOffset = .zero
         shadowView.layer.shadowRadius = 7
         shadowView.layer.shadowOpacity = 0.8
-       // shadowView.layer.backgroundColor =
     }
     
     override func layoutSubviews() {
