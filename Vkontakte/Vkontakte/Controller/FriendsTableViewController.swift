@@ -9,21 +9,21 @@ import UIKit
 
 class FriendsTableViewController: UITableViewController {
 
-    let friends = [
-        Friends(name:"Stasy", image: UIImage(named: "monkey7")),
-        Friends(name:"Sasha", image: UIImage(named: "monkey3")),
-        Friends(name:"Jonh", image: UIImage(named: "chiken")),
-        Friends(name:"Robert", image: UIImage(named: "monkey")),
-        Friends(name:"Sergey", image: UIImage(named: "monkey5")),
-        Friends(name:"Ivan", image: UIImage(named: "monkey4")),
-        Friends(name:"Skyler", image: UIImage(named: "chiken2")),
-        Friends(name:"Volha", image: UIImage(named: "monkey8")),
-        Friends(name:"Timur", image: UIImage(named: "monkey6")),
-        Friends(name:"Vitalii", image: UIImage(named: "monkey2")),
-        Friends(name:"Malia", image: UIImage(named: "monkey7")),
-        Friends(name:"Hizuki", image: UIImage(named: "monkey8")),
-        Friends(name:"Eugenii", image: UIImage(named: "monkey9")),
-        Friends(name:"Masha", image: UIImage(named: "chiken3")),
+    let myFriend = [
+        Friend(name:"Stasy", image: UIImage(named: "monkey7"), photos: monkeyprofilePhpto),
+        Friend(name:"Sasha", image: UIImage(named: "monkey3"), photos: monkeyprofilePhpto),
+        Friend(name:"Jonh", image: UIImage(named: "chiken"), photos: chikenprofilePhpto),
+        Friend(name:"Robert", image: UIImage(named: "monkey"), photos: monkeyprofilePhpto),
+        Friend(name:"Sergey", image: UIImage(named: "monkey5"), photos: monkeyprofilePhpto),
+        Friend(name:"Ivan", image: UIImage(named: "monkey4"), photos: monkeyprofilePhpto),
+        Friend(name:"Skyler", image: UIImage(named: "chiken2"), photos: chikenprofilePhpto),
+        Friend(name:"Volha", image: UIImage(named: "monkey8"), photos: monkeyprofilePhpto),
+        Friend(name:"Timur", image: UIImage(named: "monkey6"), photos: monkeyprofilePhpto),
+        Friend(name:"Vitalii", image: UIImage(named: "monkey2"), photos: monkeyprofilePhpto),
+        Friend(name:"Malia", image: UIImage(named: "monkey7"), photos: monkeyprofilePhpto),
+        Friend(name:"Hizuki", image: UIImage(named: "monkey8"), photos: monkeyprofilePhpto),
+        Friend(name:"Eugenii", image: UIImage(named: "monkey9"), photos: monkeyprofilePhpto),
+        Friend(name:"Masha", image: UIImage(named: "chiken3"), photos: chikenprofilePhpto),
 
     
     ]
@@ -48,7 +48,7 @@ class FriendsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return friends.count
+        return myFriend.count
     }
 
     
@@ -57,8 +57,9 @@ class FriendsTableViewController: UITableViewController {
             preconditionFailure("Error")
         }
         
-        cell.LabelFriends.text = friends[indexPath.row].name
-       cell.ImageFriends.image = friends[indexPath.row].image
+        cell.LabelFriends.text = myFriend[indexPath.row].name
+       cell.ImageFriends.image = myFriend[indexPath.row].image
+        
         
         return cell
     }
@@ -67,8 +68,9 @@ class FriendsTableViewController: UITableViewController {
         if segue.identifier == "showProfile",
            let destinationVC = segue.destination as? FriendsProfileCollectionViewController,
            let indexPath = tableView.indexPathForSelectedRow {
-            let friendName = friends[indexPath.row].name
+            let friendName = myFriend[indexPath.row].name
             destinationVC.title = friendName
+            destinationVC.arrayProfilePhotos = myFriend[indexPath.row].photos
         }
     }
     /*

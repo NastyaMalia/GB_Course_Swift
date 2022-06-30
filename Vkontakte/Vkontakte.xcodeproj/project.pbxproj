@@ -77,9 +77,8 @@
 		4D46878D286A11D40013F837 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4DBF5B072869E9D30015970E /* FriendsCell.swift */,
-				4D46878A286A0DED0013F837 /* FriendProfileCollectionViewCell.swift */,
-				4DBF5B022869D6110015970E /* CommunityCell.swift */,
+				4D8170FB286DAED0002955D9 /* Friend */,
+				4D8170FC286DAEDD002955D9 /* Community */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -114,7 +113,6 @@
 		4D687E1B285A148C0098242E = {
 			isa = PBXGroup;
 			children = (
-				4D8170F9286B3C1E002955D9 /* AllCommunityTableViewCell.swift */,
 				4D687E26285A148C0098242E /* Vkontakte */,
 				4D687E25285A148C0098242E /* Products */,
 			);
@@ -141,6 +139,24 @@
 				4D687E35285A14920098242E /* Info.plist */,
 			);
 			path = Vkontakte;
+			sourceTree = "<group>";
+		};
+		4D8170FB286DAED0002955D9 /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				4DBF5B072869E9D30015970E /* FriendsCell.swift */,
+				4D46878A286A0DED0013F837 /* FriendProfileCollectionViewCell.swift */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
+		4D8170FC286DAEDD002955D9 /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				4DBF5B022869D6110015970E /* CommunityCell.swift */,
+				4D8170F9286B3C1E002955D9 /* AllCommunityTableViewCell.swift */,
+			);
+			path = Community;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

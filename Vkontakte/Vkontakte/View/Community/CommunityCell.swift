@@ -1,5 +1,5 @@
 //
-//  FriendsTableViewCell.swift
+//  CommunityCell.swift
 //  Vkontakte
 //
 //  Created by Nastya Kazakova on 27.06.22.
@@ -7,16 +7,15 @@
 
 import UIKit
 
-class FriendsCell: UITableViewCell {
-    
-    @IBOutlet weak var ImageFriends: UIImageView!
-    @IBOutlet weak var LabelFriends: UILabel!
+class CommunityCell: UITableViewCell {
+
+    @IBOutlet weak var ImageCommunity: UIImageView!
+    @IBOutlet weak var CommunityLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        ImageFriends.layer.cornerRadius = ImageFriends.bounds.width / 2
-        
+        ImageCommunity.layer.cornerRadius = ImageCommunity.bounds.width / 2
         
     }
 
@@ -26,5 +25,3 @@ class FriendsCell: UITableViewCell {
         // Configure the view for the selected state
     }
 }
- 
-

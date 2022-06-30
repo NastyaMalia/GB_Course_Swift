@@ -11,6 +11,8 @@ private let reuseIdentifier = "Cell"
 
 class FriendsProfileCollectionViewController: UICollectionViewController {
 
+    var arrayProfilePhotos : [ProfilePhoto] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,7 +45,7 @@ class FriendsProfileCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 1
+        return arrayProfilePhotos.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -51,8 +53,7 @@ class FriendsProfileCollectionViewController: UICollectionViewController {
             preconditionFailure("Error")
         }
     
-        // Configure the cell
-    
+        cell.ProfilePhoto.image = arrayProfilePhotos[indexPath.row].image
         return cell
     }
 

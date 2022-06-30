@@ -61,7 +61,6 @@ class CommunitiesTableViewController: UITableViewController {
             
             let community = sourceVC.allCommunities[indexPath.row]
             
-            
             if !communities.contains(where: {$0.name == community.name}) {
                 communities.append(community)
                 tableView.reloadData()
@@ -83,10 +82,8 @@ class CommunitiesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            
             communities.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            
         } else if editingStyle == .insert {
             
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
